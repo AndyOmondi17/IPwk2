@@ -1,3 +1,9 @@
 .body{
-  background-image: url(../Images/background-image.jpeg);
+  background:url(../Images/download.jpeg) no-repeat;
+  background-size: cover;
+  height:100%;
+}
+.form-group{
+  border:1px solid ;
+  padding: 30px 40px;
 }
