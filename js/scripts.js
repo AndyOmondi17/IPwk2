@@ -1,33 +1,35 @@
+
+var Gender=document.getElementsByName('gender');
+var bd=parseInt(document.getElementById('birthDate')).value;
+var bm=parseInt(document.getElementById('birthMonth')).value;
+var yob=parseInt(document.getElementById('year')).value;
 var gd;
-var firstName=document.getElementsByName('firstName');
-var gender=document.getElementsByName('gender');
-var birthDate=document.getElementsByName('birthDate');
-var surName=document.getElementsByName('surname');
+/*function mainFunction(){*/
 
-/*function getUSerData (form){
-    var firstName = form.firstName.value;
-    var surName= form.surName.value;
-    var gender=document.getElementsByName('gender');
-    var birthDate= form.birthDate.value;
-
-    if(gender[0].checked){
-      gd=gender[0].value;
+  function validation(){
+   if((Gender[0].checked===false&&Gender[1].checked===false)||BirthDate===""||BirthMonth===""||YearOfBirth===""){
+      alert("Fill the entire form");
+      return false;
     }
-    else {
-       gd=gender[1].value;
+     else if(BirthDate<=0||BirthDate>31){
+      alert("Enter a valid date of Birth");
+      return false;
     }
-
-
-    return alert ("Hi "+firstName+" "+surName+".Your birthday is "+birthDate+"Your gender is "+gd);
-}*/
-
-function checkFormInput(){
-  if(firstName===""||surName===""||(gender[0].checked===false&&gender[1].checked===false))
-  {
-    alert ("Kindly fill the entire form");
+  /*  else if(Number.isNaN(BirthDate)===true ||Number.isNan(BirthMonth)===true||Number.isNan(YearOfBirth)===true){
+      alert("Enter the values in figures");
+      return false;
+    }*/
+    else{
+      if(Gender[0].checked){
+        gd=Gender[0].value;
+        alert("Male");
+      }
+      else{
+        gd=Gender[1].value;
+        alert("Female");
+      }
+      alert(gd+bd+bm+yob);
+      return true;
+    }
   }
-}
-function getAkanName(){
-  var maleNames=["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
-  var femaleNames=["Akosua","Adwoa","Abenaa","Akua","Yaa"," Afua"," Ama"];
-}
+/*}*/

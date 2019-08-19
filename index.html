@@ -4,32 +4,44 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="Css/css/bootstrap.css">
     <link rel="stylesheet" href="Css/styling.css">
-    <script src="js/scripts.js" charset="utf-8"></script>
+    <script src="js2/js2.js" type="text/jscript"></script>
     <title>Akan Name generator</title>
   </head>
   <body class="body">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <h1>AKAN NAME GENERATOR</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        </div>
 
         <div class="col-md-4">
-          <h2>AKAN NAME GENERATOR</h2>
-          <form name="akan" class="form-group" action="index.html" method="post">
-            FirstName:
-            <input type="text" name="firstName" value="" class="form-control">
-            <br><br>
-             Surname:
-            <input type="text" name="surName" value="" class="form-control">
-            <br><br>
-            Gender:<br>
-            <input type="radio" name="gender" value="Male" id="male1"onclick=0>Male<br>
-            <input type="radio" name="gender" value="Female"id="female1" onclick=0>Female<br>
-            <br>
-            BirthDate:
-            <input type="date" name="birthDate" value="" class="form-control">
-            <br><br>
-            <input type="submit" name="submitButton" value="submit" class="btn btn-primary" onclick="checkFormInput()">
 
+          <form name="akan" method="post" onsubmit= "mainFunction()">
+
+            Gender:<br>
+            <input type="radio" name="gender" value="Male" onclick=0>Male<br>
+            <input type="radio" name="gender" value="Female" onclick=0>Female<br>
+            <br>
+            <center>
+            BirthDate
+            </center>
+            <input type="text" name="BirthDate" value="" class="form-control" id="date"required >
+            <br>
+            <center>
+            BirthMonth
+            </center>
+            <input type="text" name="BirthMonth" value="" class="form-control" id="month" required>
+            <br>
+            <center>
+            YearOfBirth
+            </center>
+            <input type="text" name="YearOfBirth" value="" class="form-control" id="year" required>
+            <br>
+            <input type="submit" name="submitButton" value="submit" class="btn btn-primary" onclick="validation()" >
+            <br><br>
+            <input type="reset" name="resetButton" value="clear" class="btn btn-primary">
           </form>
         </div>
 
