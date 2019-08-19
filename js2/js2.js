@@ -12,7 +12,7 @@ function validation(){
 
 
 
-    var d=( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
+  
     var answer=Math.round(d);
     alert("Your d is"+answer);
 
